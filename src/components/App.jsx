@@ -61,7 +61,7 @@ export const App = () => {
             deleteContact={deleteContact}
           />
         </>) : (
-          <p className={style.title}>Contact list is empty</p>
+          <p className={style.empty}>Contact list is empty</p>
           )}
       </div>
     );
