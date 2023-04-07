@@ -1,16 +1,16 @@
 import React from 'react';
-import s from './Filter.module.css';
+import style from './Filter.module.css';
 import PropTypes from 'prop-types';
 
-const Filter = ({ value, onChange }) => (
-  <div className={s.filter}>
-    <label className={s.labelFilter}>
+export const Filter = ({ value, onChange }) => (
+  <div className={style.filter}>
+    <label className={style.labelFilter}>
       Filter
       <input
         type="name"
         value={value}
         onChange={onChange}
-        className={s.filterInput}
+        className={style.filterInput}
       />
     </label>
   </div>
@@ -20,5 +20,3 @@ Filter.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
-
-export default Filter;
