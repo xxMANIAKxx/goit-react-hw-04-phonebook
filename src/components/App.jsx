@@ -52,12 +52,17 @@ export const App = () => {
         <ContactForm onSubmit={addContact} />
 
         <h2 className={style.titleContacts}>Contacts</h2>
-        <div className={style.allContacts}>All contacts: {contacts.length}</div>
-        <Filter filter={filter} changeFilter={changeFilter} />
-        <ContactList
-          contacts={visibleContacts()}
-          deleteContact={deleteContact}
-        />
+      <div className={style.allContacts}>All contacts: {contacts.length}</div>
+      {contacts.length > 0 ? (
+        <>
+          <Filter filter={filter} changeFilter={changeFilter} />
+          <ContactList
+            contacts={visibleContacts()}
+            deleteContact={deleteContact}
+          />
+        </>) : (
+          <p className={style.title}>Contact list is empty</p>
+          )}
       </div>
     );
   }
