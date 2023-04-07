@@ -45,7 +45,8 @@ export const App = () => {
     setFilter('');
   };
 
-    return (
+  return (
+      
       <div className={style.container} >
         <h1>Phonebook</h1>
         <ContactForm onSubmit={addContact} />
@@ -54,7 +55,7 @@ export const App = () => {
         <div className={style.allContacts}>All contacts: {contacts.length}</div>
         <Filter filter={filter} changeFilter={changeFilter} />
         <ContactList
-          contacts={visibleContacts}
+          contacts={visibleContacts()}
           deleteContact={deleteContact}
         />
       </div>
